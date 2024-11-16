@@ -6,7 +6,35 @@ include_once "common/header.php";
 </style>
 <div class="row justify-content-center wrapper">
 <div class="col-md-6">
+<?php
+if (!empty($_SESSION['success'])) {
+  ?>
+  <div class = "alert alert-success">
+    <?php echo $_SESSION['success'];?>
+  </div>
+  <?php
+  unset($_SESSION['success']);
+  }
+?>
 
+
+<?php
+if (isset($_SESSION['error'])) {
+  ?>
+  <div class = "alert alert-danger">
+    <ul>
+      <?php
+      foreach($_SESSION['error'] as $error)
+      {
+        print'<li>'.$error.'</li>';
+      }
+      ?>
+    </ul>
+  </div>
+  <?php
+  unset($_SESSION['error']);
+  }
+?>
 <div class="card">
 <header class="card-header">
 	<h4 class="card-title mt-2">Sign up</h4>
