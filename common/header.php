@@ -18,7 +18,7 @@ require_once "includes/config.php";
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 <div class="container">
-  <a class="navbar-brand" href="<?php echo SITEURL; ?>"><i class="fa fa-address-book"></i> ContactBook</a>
+  <a class="navbar-brand" href="<?php echo SITEURL; ?>"><i class="fa fa-address-book"></i> ContactsBook</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,10 +28,10 @@ require_once "includes/config.php";
         <a class="nav-link" href="/contactbook/">Home <span class="sr-only">(current)</span></a>
       </li>
             <li class="nav-item"  active>
-        <a class="nav-link" href="/contactbook/signup.php">Signup</a>
+        <a class="nav-link" href="<?php echo SITEURL."signup.php";?>">Signup</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="/contactbook/login.php">Login</a>
+        <a class="nav-link" href="<?php echo SITEURL."login.php";?>">Login</a>
       </li>
           </ul>
   </div>
