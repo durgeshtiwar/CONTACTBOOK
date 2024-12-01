@@ -9,6 +9,12 @@
 <body>
   <?php
   include_once("./client/header.php");
+  if (isset($_GET['signUp'])) {
+  include_once("./client/signUp.php");
+  }elseif(isset($_GET['login']))
+  {
+    include_once("./client/login.php");
+  }
   ?>
 </body>
 </html>

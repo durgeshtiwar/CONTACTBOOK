@@ -1,3 +1,11 @@
 a{
-  color: skyblue !important;
+  font-size: large;
+  font-weight: bold;
+}
+.margin_bottom_15{
+  margin-bottom: 15px;
+}
+.heading{
+  text-align: center;
+  color: blue;
 }
