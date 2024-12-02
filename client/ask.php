@@ -15,11 +15,9 @@
 
   <div class="col-6 offset-sm-3 margin_bottom_15">
     <label for="category" class="form-label ">Category</label>
-    <select class="form-control" name="category" id="category">
-      <option value="">mobile</option>
-      <option value="">kuch bhi</option>
-      <option value="">coding</option>
-    </select>
+    <?php
+    include_once("category.php");
+    ?>
   </div>
   <div class="col-6 offset-sm-3 margin_bottom_15">
   <button type="submit" name="ask" class="btn btn-primary">Ask Question</button>
