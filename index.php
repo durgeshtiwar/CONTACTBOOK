@@ -16,6 +16,9 @@
   }elseif(isset($_GET['login']) && !isset($_SESSION['user']['username']) ) 
   {
     include_once("./client/login.php");
+  }elseif(isset($_GET['ask']))
+  {
+    include_once("./client/ask.php");
   }
   ?>
 </body>
