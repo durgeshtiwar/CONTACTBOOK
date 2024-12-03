@@ -19,6 +19,8 @@
   }elseif(isset($_GET['ask']))
   {
     include_once("./client/ask.php");
+  }else{
+    include_once("./client/questions.php");
   }
   ?>
 </body>
