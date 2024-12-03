@@ -60,9 +60,20 @@ if (isset($_POST['signUp'])) {
     } else {
       echo"User Not Registered";
     }
-  }elseif(isset($_POST['answer']))
-  {
-    echo"<pre>";
-   print_r($_POST);
+  }elseif( isset($_POST['answer'])){
+    $answer = $_POST['answer'];
+    $question_id = $_POST['question_id'];
+    $user_id = $_SESSION['user']['user_id'];
+
+    $query = $conn->prepare("Insert into `answers`
+    (`id`,`answer`,`question_id`,`user_id`)
+    values(NULL,'$answer', '$question_id', '$user_id');");
+    $result = $query->execute();
+    if ($result) {
+      header("location: /contactbook?q-id=$question_id");
+      exit;
+    } else {
+      echo"Answer Not Submitted";
+    }
   }
 ?>

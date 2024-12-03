@@ -15,5 +15,8 @@
       }
       ?>
       </div>
+      <div class="col-4">
+            <?php include('categoryList.php'); ?>
+        </div>
       </div>
 </div>

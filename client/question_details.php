@@ -10,6 +10,7 @@
             $cid = $row['category_id'];
             echo "<h4 class='margin_bottom_15 question-title'>Question : " . $row['title'] . "</h4>
             <p class='margin_bottom_15'>" . $row['description'] . "</p>";
+            include_once("answer.php");
             ?>
             <form action="./server/requests.php" method="post">
                 <input type="hidden" name="question_id" value="<?php echo $qid ?>">
