@@ -8,9 +8,11 @@
       $result = $conn->query($query);
       foreach ($result as $row) {
         $title = $row['title'];
+        $id = $row['id'];
         echo "<div class='row question-list'>
-        <h4><a href='#'>$title</a></h4>
-        </div>";}
+        <h4><a href='?q-id=$id'>$title</a></h4>
+        </div>";
+      }
       ?>
       </div>
       </div>

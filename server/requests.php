@@ -60,5 +60,9 @@ if (isset($_POST['signUp'])) {
     } else {
       echo"User Not Registered";
     }
+  }elseif(isset($_POST['answer']))
+  {
+    echo"<pre>";
+   print_r($_POST);
   }
 ?>

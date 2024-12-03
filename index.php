@@ -19,7 +19,12 @@
   }elseif(isset($_GET['ask']))
   {
     include_once("./client/ask.php");
-  }else{
+  }else if(isset($_GET['q-id'])) 
+  {
+    $qid = $_GET['q-id'];
+    include_once("./client/question_details.php");
+ }
+  else{
     include_once("./client/questions.php");
   }
   ?>

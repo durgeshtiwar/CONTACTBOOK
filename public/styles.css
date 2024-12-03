@@ -7,7 +7,7 @@ a{
 }
 .heading{
   text-align: center;
-  color: blue;
+  color: rgb(1, 1, 16);
 }
 .question-list {
   border: 1px solid #ddd;
@@ -18,7 +18,7 @@ a{
   margin: 0;
   padding: 0;
 }
-.question-list a {
+.question-list a,.question-title {
   font-size: 18px;
   text-decoration: none;
   color: #1c7194;
