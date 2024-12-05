@@ -17,6 +17,24 @@
                 <textarea name="answer" class="form-control margin_bottom_15" placeholder="Your answer..."></textarea>
                 <button class="btn btn-primary">Write your answer</button>
             </form>
-</div>
+        </div>
+        <div class="col-4">
+            <?php
+           $categoryQuery = "select name from category where id=$cid";
+           $categoryResult = $conn->query($categoryQuery);
+           $categoryRow = $categoryResult->fetch_assoc();
+           echo "<h1>" . ucfirst($categoryRow['name']) . "</h1>";
+           $query = "select * from questions where category_id=$cid and id!=$qid";
+           $result = $conn->query($query);
+           foreach ($result as $row) {
+               $id = $row['id'];
+               $title = $row['title'];
+
+               echo "<div class='question-list'>
+               <h4><a href=?q-id=$id>$title</a></h4>
+               </div>";
+           }
+            ?>
+        </div>
 </div>
 </div>

@@ -19,13 +19,20 @@
   }elseif(isset($_GET['ask']))
   {
     include_once("./client/ask.php");
-  }else if(isset($_GET['q-id'])) 
+  }else if(isset($_GET['q-id']) && isset($_SESSION['user']['username']) ) 
   {
     $qid = $_GET['q-id'];
     include_once("./client/question_details.php");
   }elseif(isset($_GET['c-id']))
   {
     $cid =  $_GET['c-id'];
+    include_once("./client/questions.php");
+  }elseif(isset($_GET['u-id']))
+  {
+    $uid =  $_GET['u-id'];
+    include_once("./client/questions.php");
+  }elseif(isset($_GET['latest']))
+  {
     include_once("./client/questions.php");
   }
   else{
