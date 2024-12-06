@@ -35,6 +35,11 @@
   {
     include_once("./client/questions.php");
   }
+  elseif(isset($_GET['search']))
+  {
+    $search = $_GET['search'];
+    include_once("./client/questions.php");
+  }
   else{
     include_once("./client/questions.php");
   }

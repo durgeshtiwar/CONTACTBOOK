@@ -10,6 +10,8 @@
         $query = "select * from questions where user_id=$uid";
       }else if (isset($_GET["latest"])) {
         $query = "select * from questions order by id desc";
+      }else if (isset($_GET["search"])) {
+        $query = "select * from questions where `title` like '%$search%'";
       }
        else {
         $query = "select * from questions";
@@ -19,8 +21,13 @@
         $title = $row['title'];
         $id = $row['id'];
         echo "<div class='row question-list'>
-        <h4><a href='?q-id=$id'>$title</a></h4>
-        </div>";
+        <h4><a href='?q-id=$id'>$title</a>";
+        if ($uid) {
+          echo "Delete";
+        }else{
+          echo NULL;
+        }
+        echo"</h4></div>";
       }
       ?>
       </div>
