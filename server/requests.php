@@ -75,5 +75,14 @@ if (isset($_POST['signUp'])) {
     } else {
       echo"Answer Not Submitted";
     }
-  }
+  }else if (isset($_GET["delete"])) {
+    echo $qid= $_GET["delete"];
+     $query= $conn->prepare("delete from questions where id =$qid");
+     $result = $query->execute();
+     if($result){
+        header("location: /contactbook");
+     }else {
+        echo "Question not deleted";
+     }
+}
 ?>

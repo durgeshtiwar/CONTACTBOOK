@@ -21,9 +21,9 @@
         $title = $row['title'];
         $id = $row['id'];
         echo "<div class='row question-list'>
-        <h4><a href='?q-id=$id'>$title</a>";
-        if ($uid) {
-          echo "Delete";
+        <h4 class = 'my-question'><a href='?q-id=$id'>$title</a>";
+        if (isset($_GET['u-id'])) {
+          echo "<a href='./server/requests.php?delete=$id'><h5 class = 'delete'>Delete</h5></a>";
         }else{
           echo NULL;
         }
